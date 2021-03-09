@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/01%E8%B7%AF%E7%94%B1%E7%AE%A1%E7%90%86.dart';
 import 'package:flutter_demo/02%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86.dart';
+import 'package:flutter_demo/route_manager.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,8 +19,8 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
       routes: {
-        "/routePage": (context) => RoutePage("bbb"),
-        '/assetPage': (context) => AssetPage()
+        Path.routePage: (context) => RoutePage("bbb"),
+        Path.assetPage: (context) => AssetPage()
       },
 
       ///注意，配置这个就不能够同时定义上面：routes，同时定义以上面的为准
@@ -74,7 +75,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             MyText(
               '02资源管理',
-              () => {Navigator.of(context).pushNamed('/assetPage')},
+              () => {
+                Navigator.of(context).pushNamed(Path.assetPage)},
             ),
           ],
         ));
@@ -82,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _back(BuildContext context) async {
     final backValue =
-        await Navigator.of(context).pushNamed("/routePage", arguments: '传递的值');
+        await Navigator.of(context).pushNamed(Path.routePage, arguments: '传递的值');
     setState(() {
       widget.title = backValue;
     });

@@ -32,7 +32,9 @@ class AssetPageState extends State<AssetPage> {
    */
   Future<void> loadAsset() async {
     Future<String> f = rootBundle.loadString('images/config.json');
-    f.then((value) => text = value);
+    setState(() {
+      f.then((value) => {text = value});
+    });
   }
 
   /*
@@ -46,7 +48,6 @@ class AssetPageState extends State<AssetPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     loadAsset();
     loadAsset2(context);
