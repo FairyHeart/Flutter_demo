@@ -53,7 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: ListView(
+      body: Wrap(
+        spacing: 5,
         children: children(context),
       ),
     );

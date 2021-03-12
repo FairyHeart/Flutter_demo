@@ -6,6 +6,16 @@ import 'package:flutter_demo/widget/04_checkbox.dart';
 import 'package:flutter_demo/widget/05_form.dart';
 import 'package:flutter_demo/widget/05_textfield.dart';
 import 'package:flutter_demo/widget/06_row.dart';
+import 'package:flutter_demo/widget/07_expanded.dart';
+import 'package:flutter_demo/widget/08_wrap.dart';
+import 'package:flutter_demo/widget/09_padding.dart';
+import 'package:flutter_demo/widget/10_decoratedbox.dart';
+import 'package:flutter_demo/widget/11_singlechildscrollview.dart';
+import 'package:flutter_demo/widget/12_listview.dart';
+import 'package:flutter_demo/widget/13_gridview.dart';
+import 'package:flutter_demo/widget/14_customscrollview.dart';
+import 'package:flutter_demo/widget/15_scroll_listener.dart';
+import 'package:flutter_demo/widget/16_scroll_notification.dart';
 
 import '01路由管理.dart';
 import '02资源管理.dart';
@@ -22,6 +32,16 @@ class Path {
   static var fieldPage = _basePage + 'field';
   static var formPage = _basePage + 'form';
   static var rowPage = _basePage + 'row';
+  static var expandedPage = _basePage + 'expanded';
+  static var wrapPage = _basePage + 'wrap';
+  static var paddingPage = _basePage + 'padding';
+  static var decoratedBoxPage = _basePage + 'decoratedBox';
+  static var singleChildScrollViewPage = _basePage + 'singleChildScrollView';
+  static var listViewPage = _basePage + 'listView';
+  static var gridViewPage = _basePage + 'gridView';
+  static var customScrollViewPage = _basePage + 'customScrollView';
+  static var scrollListenerPage = _basePage + 'scrollListener';
+  static var scrollNotificationPage = _basePage + 'scrollNotification';
 }
 
 Map<String, WidgetBuilder> getRoutes() {
@@ -35,6 +55,16 @@ Map<String, WidgetBuilder> getRoutes() {
     Path.fieldPage: (context) => FieldPage(),
     Path.formPage: (context) => FormPage(),
     Path.rowPage: (context) => RowPage(),
+    Path.expandedPage: (context) => ExpandedPage(),
+    Path.wrapPage: (context) => WrapPage(),
+    Path.paddingPage: (context) => PaddingPage(),
+    Path.decoratedBoxPage: (context) => DecoratedBoxPage(),
+    Path.singleChildScrollViewPage: (context) => SingleChildScrollViewPage(),
+    Path.listViewPage: (context) => ListViewPage(),
+    Path.gridViewPage: (context) => GridViewPage(),
+    Path.customScrollViewPage: (context) => CustomScrollViewPage(),
+    Path.scrollListenerPage: (context) => ScrollListenerPage(),
+    Path.scrollNotificationPage: (context) => ScrollNotificationPage(),
   };
 }
 
@@ -52,6 +82,16 @@ List<Widget> children(BuildContext context) {
     _addText(context, 'TextField', Path.fieldPage),
     _addText(context, 'Form', Path.formPage),
     _addText(context, 'Row/Column', Path.rowPage),
+    _addText(context, 'Flex/Expanded', Path.expandedPage),
+    _addText(context, 'Wrap', Path.wrapPage),
+    _addText(context, 'Padding', Path.paddingPage),
+    _addText(context, 'DecoratedBox', Path.decoratedBoxPage),
+    _addText(context, 'SingleChildScrollView', Path.singleChildScrollViewPage),
+    _addText(context, 'ListView', Path.listViewPage),
+    _addText(context, 'GridView', Path.gridViewPage),
+    _addText(context, 'CustomScrollView', Path.customScrollViewPage),
+    _addText(context, 'ScrollListener', Path.scrollListenerPage),
+    _addText(context, 'ScrollNotification', Path.scrollNotificationPage),
   ];
 }
 
