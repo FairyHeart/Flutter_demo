@@ -16,6 +16,12 @@ import 'package:flutter_demo/widget/13_gridview.dart';
 import 'package:flutter_demo/widget/14_customscrollview.dart';
 import 'package:flutter_demo/widget/15_scroll_listener.dart';
 import 'package:flutter_demo/widget/16_scroll_notification.dart';
+import 'package:flutter_demo/widget/17_progress.dart';
+import 'package:flutter_demo/widget/18_scaffold.dart';
+import 'package:flutter_demo/widget/19_clip.dart';
+import 'package:flutter_demo/widget/20_theme.dart';
+import 'package:flutter_demo/widget/21_future_builder.dart';
+import 'package:flutter_demo/widget/22_dialog.dart';
 
 import '01路由管理.dart';
 import '02资源管理.dart';
@@ -42,6 +48,12 @@ class Path {
   static var customScrollViewPage = _basePage + 'customScrollView';
   static var scrollListenerPage = _basePage + 'scrollListener';
   static var scrollNotificationPage = _basePage + 'scrollNotification';
+  static var progressPage = _basePage + 'progress';
+  static var scaffoldPage = _basePage + 'scaffold';
+  static var clipPage = _basePage + 'clip';
+  static var themePage = _basePage + 'theme';
+  static var futureBuilderPage = _basePage + 'futureBuilder';
+  static var dialogPage = _basePage + 'dialog';
 }
 
 Map<String, WidgetBuilder> getRoutes() {
@@ -65,6 +77,12 @@ Map<String, WidgetBuilder> getRoutes() {
     Path.customScrollViewPage: (context) => CustomScrollViewPage(),
     Path.scrollListenerPage: (context) => ScrollListenerPage(),
     Path.scrollNotificationPage: (context) => ScrollNotificationPage(),
+    Path.progressPage: (context) => ProgressPage(),
+    Path.scaffoldPage: (context) => ScaffoldPage(),
+    Path.clipPage: (context) => ClipPage(),
+    Path.themePage: (context) => ThemePage(),
+    Path.futureBuilderPage: (context) => FutureBuilderPage(),
+    Path.dialogPage: (context) => DialogPage(),
   };
 }
 
@@ -92,6 +110,12 @@ List<Widget> children(BuildContext context) {
     _addText(context, 'CustomScrollView', Path.customScrollViewPage),
     _addText(context, 'ScrollListener', Path.scrollListenerPage),
     _addText(context, 'ScrollNotification', Path.scrollNotificationPage),
+    _addText(context, 'Progress', Path.progressPage),
+    _addText(context, 'Scaffold', Path.scaffoldPage),
+    _addText(context, 'Clip', Path.clipPage),
+    _addText(context, 'Theme', Path.themePage),
+    _addText(context, 'FutureBuilder', Path.futureBuilderPage),
+    _addText(context, 'Dialog', Path.dialogPage),
   ];
 }
 
