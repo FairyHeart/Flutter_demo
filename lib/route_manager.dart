@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/03_file.dart';
 import 'package:flutter_demo/widget/01_text.dart';
 import 'package:flutter_demo/widget/02_button.dart';
 import 'package:flutter_demo/widget/03_image.dart';
@@ -54,6 +55,7 @@ class Path {
   static var themePage = _basePage + 'theme';
   static var futureBuilderPage = _basePage + 'futureBuilder';
   static var dialogPage = _basePage + 'dialog';
+  static var filePage = _basePage + 'file';
 }
 
 Map<String, WidgetBuilder> getRoutes() {
@@ -83,6 +85,7 @@ Map<String, WidgetBuilder> getRoutes() {
     Path.themePage: (context) => ThemePage(),
     Path.futureBuilderPage: (context) => FutureBuilderPage(),
     Path.dialogPage: (context) => DialogPage(),
+    Path.filePage: (context) => FilePage(),
   };
 }
 
@@ -116,6 +119,7 @@ List<Widget> children(BuildContext context) {
     _addText(context, 'Theme', Path.themePage),
     _addText(context, 'FutureBuilder', Path.futureBuilderPage),
     _addText(context, 'Dialog', Path.dialogPage),
+    _addText(context, 'File', Path.filePage),
   ];
 }
 
