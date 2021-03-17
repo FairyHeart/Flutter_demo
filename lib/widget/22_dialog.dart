@@ -186,7 +186,7 @@ class DialogPage extends StatelessWidget {
                     Text("同时删除子目录？"),
                     Checkbox(
                       value: withTree,
-                      onChanged: (bool value) {
+                      onChanged: (bool? value) {
                         //复选框选中状态发生变化时重新构建UI
                         (context as Element).markNeedsBuild();
                         withTree = !withTree;
@@ -247,7 +247,7 @@ class DialogPage extends StatelessWidget {
 
   _showAndroidDateDialog(BuildContext context) async {
     var date = DateTime.now();
-    DateTime dateF = await showDatePicker(
+    DateTime? dateF = await showDatePicker(
       context: context,
       initialDate: date,
       firstDate: date,

@@ -6,7 +6,7 @@ class ThemePage extends StatefulWidget {
 }
 
 class ThemePageState extends State<ThemePage> {
-  Color _themeColor = Colors.teal;
+  MaterialColor _themeColor = Colors.teal;
 
   @override
   Widget build(BuildContext context) {

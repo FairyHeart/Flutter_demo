@@ -9,7 +9,7 @@ class ScaffoldPage extends StatefulWidget {
 class ScaffoldPageState extends State<ScaffoldPage>
     with SingleTickerProviderStateMixin {
   int _selectIndex = 1;
-  TabController _tabController;
+  late TabController _tabController;
 
   List tabs = ["新闻", "历史", "图片"];
 

@@ -20,7 +20,7 @@ class FutureBuilderPageState extends State<FutureBuilderPage> {
               if (snapshot.hasError) {
                 return Text('error');
               } else {
-                return Text(snapshot.data);
+                return Text(snapshot.data.toString());
               }
             } else {
               return CircularProgressIndicator();

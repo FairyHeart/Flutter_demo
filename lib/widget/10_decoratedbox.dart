@@ -10,7 +10,7 @@ class DecoratedBoxPage extends StatelessWidget {
       body: DecoratedBox(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.red, Colors.orange[700]],
+            colors: [Colors.red, Colors.green],
           ),
           borderRadius: BorderRadius.circular(8),
           boxShadow: [

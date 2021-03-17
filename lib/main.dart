@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
 
       ///注意，配置这个就不能够同时定义上面：routes，同时定义以上面的为准
       onGenerateRoute: (RouteSettings settings) {
-        String name = settings.name;
-        Function function = routes[name];
+        String? name = settings.name;
+        Function function = routes[name]!;
         if (function != null) {
           Route route = MaterialPageRoute(
             builder: (context) =>
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
 
 // ignore: must_be_immutable
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   String title;
 

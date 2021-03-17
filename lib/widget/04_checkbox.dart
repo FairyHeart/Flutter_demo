@@ -30,7 +30,7 @@ class BoxPageState extends State<BoxPage> {
               value: _checkBoxSelected,
               onChanged: (value) {
                 setState(() {
-                  _checkBoxSelected = value;
+                  _checkBoxSelected = value!;
                 });
               },
             )

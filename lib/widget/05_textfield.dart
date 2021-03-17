@@ -6,7 +6,7 @@ class FieldPage extends StatefulWidget {
 }
 
 class FieldPageState extends State<FieldPage> {
-  TextEditingController _controller;
+  late TextEditingController _controller;
 
   @override
   Widget build(BuildContext context) {

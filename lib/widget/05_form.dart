@@ -30,7 +30,7 @@ class _FormStatus extends State<FormPage> {
                       hintText: 'put user name',
                       icon: Icon(Icons.person)),
                   validator: (value) {
-                    return value.trim().length > 0
+                    return value!.trim().length > 0
                         ? null
                         : 'user name is not null';
                   },
@@ -44,7 +44,7 @@ class _FormStatus extends State<FormPage> {
                     obscureText: true,
                     //校验密码
                     validator: (v) {
-                      return v.trim().length > 5 ? null : "密码不能少于6位";
+                      return v!.trim().length > 5 ? null : "密码不能少于6位";
                     }),
                 // 登录按钮
                 Padding(
