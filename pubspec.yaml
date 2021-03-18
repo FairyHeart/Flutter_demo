@@ -24,19 +24,28 @@ dependencies:
   flutter:
     sdk: flutter
 
+  #国际化支持
+  flutter_localizations:
+    sdk: flutter
+
+  path_provider: ^2.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
-  path_provider: ^1.6.18
-
   #json转换
   json_annotation: ^4.0.0
+
+  webview_flutter: ^2.0.2
+
+  camera: ^0.5.2+2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  path_provider: ^2.0.1
 
   #json转换
   build_runner: ^1.0.0

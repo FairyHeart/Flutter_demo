@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/01%E8%B7%AF%E7%94%B1%E7%AE%A1%E7%90%86.dart';
 import 'package:flutter_demo/route_manager.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      // 本地化的代理类
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', 'US'),
+        const Locale('zh', 'CN'),
+      ],
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
