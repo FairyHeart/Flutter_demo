@@ -3,6 +3,8 @@ import 'package:flutter_demo/03_file.dart';
 import 'package:flutter_demo/04_texture.dart';
 import 'package:flutter_demo/05_webview.dart';
 import 'package:flutter_demo/pub/image_pick.dart';
+import 'package:flutter_demo/pub/qr_code_scanner.dart';
+import 'package:flutter_demo/pub/qr_page.dart';
 import 'package:flutter_demo/widget/01_text.dart';
 import 'package:flutter_demo/widget/02_button.dart';
 import 'package:flutter_demo/widget/03_image.dart';
@@ -62,6 +64,9 @@ class Path {
   static var texturePage = _basePage + 'texture';
   static var webViewPage = _basePage + 'webView';
   static var imagePickPage = _basePage + 'imagePick';
+  static var qrCodePage = _basePage + 'qr_code';
+  static var qrPage = _basePage + 'qr';
+
 }
 
 Map<String, WidgetBuilder> getRoutes() {
@@ -95,6 +100,9 @@ Map<String, WidgetBuilder> getRoutes() {
     Path.texturePage: (context) => TexturePage(),
     Path.webViewPage: (context) => WebViewPage(),
     Path.imagePickPage: (context) => ImagePickPage(),
+    Path.qrCodePage: (context) => QrCodePage(),
+    Path.qrPage: (context) => QrPage(),
+
   };
 }
 
@@ -132,6 +140,7 @@ List<Widget> children(BuildContext context) {
     _addText(context, 'Texture', Path.texturePage),
     _addText(context, 'WebView', Path.webViewPage),
     _addText(context, 'ImagePick', Path.imagePickPage),
+    _addText(context, 'qr_code_scanner', Path.qrCodePage),
   ];
 }
 
