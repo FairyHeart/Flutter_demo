@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/03_file.dart';
 import 'package:flutter_demo/04_texture.dart';
 import 'package:flutter_demo/05_webview.dart';
+import 'package:flutter_demo/pub/image_pick.dart';
 import 'package:flutter_demo/widget/01_text.dart';
 import 'package:flutter_demo/widget/02_button.dart';
 import 'package:flutter_demo/widget/03_image.dart';
@@ -60,6 +61,7 @@ class Path {
   static var filePage = _basePage + 'file';
   static var texturePage = _basePage + 'texture';
   static var webViewPage = _basePage + 'webView';
+  static var imagePickPage = _basePage + 'imagePick';
 }
 
 Map<String, WidgetBuilder> getRoutes() {
@@ -92,6 +94,7 @@ Map<String, WidgetBuilder> getRoutes() {
     Path.filePage: (context) => FilePage(),
     Path.texturePage: (context) => TexturePage(),
     Path.webViewPage: (context) => WebViewPage(),
+    Path.imagePickPage: (context) => ImagePickPage(),
   };
 }
 
@@ -128,6 +131,7 @@ List<Widget> children(BuildContext context) {
     _addText(context, 'File', Path.filePage),
     _addText(context, 'Texture', Path.texturePage),
     _addText(context, 'WebView', Path.webViewPage),
+    _addText(context, 'ImagePick', Path.imagePickPage),
   ];
 }
 
